@@ -1,4 +1,4 @@
-#Exemplo de angular 1 com webpack 2 que habilitar o System Loader do ES 6.
+#Exemplo de angular 1 com webpack 2 que habilita o System Loader do ES 6.
 
 
 ##### Uso
