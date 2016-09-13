@@ -1,6 +1,6 @@
-webpackJsonp([0],[
-/* 0 */,
-/* 1 */
+webpackJsonp([0],{
+
+/***/ 8:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19,4 +19,6 @@ var MainController = function MainController($window) {
 MainController.$inject = ["$window"];
 
 /***/ }
-]);
+
+});
+//# sourceMappingURL=0.app.bundle.js.map
