@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
 	entry: path.resolve(__dirname, 'app.js'),
@@ -11,5 +12,11 @@ module.exports = {
 			test: /\.js$/,
 			loader: 'babel'
 		}]
-	}
+	},
+	plugins: [
+        new webpack.ProvidePlugin({
+            'Promise': 'es6-promise',
+            'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+        })
+    ]
 };
