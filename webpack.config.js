@@ -4,12 +4,12 @@ var webpack = require('webpack');
 module.exports = {
     entry: [
         path.resolve(__dirname, 'src/app/boot.js'),
-        path.resolve(__dirname, 'src/vendor/es6-promise.min.js'),
-        path.resolve(__dirname, 'src/vendor/fetch.js')
+        path.resolve(__dirname, 'src/vendor/polyfills/polyfills.js')
     ],
     output: {
-        path: path.resolve(__dirname, 'target'),
-        filename: 'app.bundle.js'
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'app.bundle.min.js',
+        publicPath: path.join(__dirname, "dist/")
     },
     module: {
         loaders: [{
@@ -19,7 +19,9 @@ module.exports = {
         }]
     },
     plugins: [
-        new webpack.IgnorePlugin(/vertx/)
+        new webpack.IgnorePlugin(/vertx/),
+        new webpack.optimize.UglifyJsPlugin({sourceMap: true}),
+        new webpack.ContextReplacementPlugin("./src")
     ],
     devtool: 'source-map'
 };

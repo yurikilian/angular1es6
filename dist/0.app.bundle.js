@@ -1,0 +1,1 @@
+webpackJsonp([0],{9:function(n,t,a){"use strict";function c(n,t){if(!(n instanceof t))throw new TypeError("Cannot call a class as a function")}var o=function i(n){c(this,i),n.alert("loucura!!"),this.nomeAplicacao="teste"};t["default"]=o,o.$inject=["$window"]}});

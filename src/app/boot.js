@@ -1,10 +1,17 @@
+//var modulePaths = ['../app/components/app.components', '../app/shared/app.shared'];
+
 import angular from 'angular';
-angular.module("app", []);
 
-
-System.import('../app/components/main/main.controller').then(function(module) {
-  angular.module('app').controller('MainController', module.default);
-  angular.bootstrap(document, ['app']);
-}).catch(function(error){
-  console.error(error);
+Promise.all([
+    System.import('../app/components/app.components.js'),
+    System.import('../app/shared/app.shared.js')
+]).then(modules => {
+    let dependencies = [];
+    modules.forEach(module => {
+        dependencies.push(module.default.name);
+    })
+    angular.module("app", dependencies);
+    angular.bootstrap(document, ['app']);
+}).catch(error => {
+    console.error(error.message)
 });

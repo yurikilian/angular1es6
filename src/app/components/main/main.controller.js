@@ -5,5 +5,4 @@ export default class MainController {
     }
 }
 
-
 MainController.$inject = ["$window"];
