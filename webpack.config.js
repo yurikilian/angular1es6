@@ -3,13 +3,12 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: [
-        path.resolve(__dirname, 'src/app/boot.js'),
-        path.resolve(__dirname, 'src/vendor/polyfills/polyfills.js')
+        path.resolve(__dirname, 'src/app/app.js'),
+        path.resolve(__dirname, 'src/vendor/app.vendor.js')
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'app.bundle.min.js',
-        publicPath: path.join(__dirname, "dist/")
+        filename: 'app.bundle.min.js'
     },
     module: {
         loaders: [{
