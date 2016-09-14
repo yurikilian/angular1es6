@@ -21,5 +21,6 @@
     "it": false,
     "beforeEach": false,
     "expect": false,
-  }
+  },
+  "plugins": ["angular"]
 }
