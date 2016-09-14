@@ -1,9 +1,8 @@
-#Exemplo de angular 1 com webpack 2 que habilita o System Loader do ES 6.
+#Angular 1x + Webpack2 + ES6 Sistem.import for split feature example.
 
 
-##### Uso
-
+##### Usage
 - npm install
 - npm build
 
-Visualizar ./build/index.html para conclusões.
+See ./build/index.html for more details.
