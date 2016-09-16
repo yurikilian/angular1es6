@@ -1,7 +1,6 @@
 export default class MainController {
     constructor($window) {
-      $window.alert("loucura!!");
-      this.nomeAplicacao = "teste";
+      this.nomeAplicacao = "Angular 1 com Webpack 2 e Importação dinamica com System Loader";
     }
 }
 
