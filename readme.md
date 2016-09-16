@@ -1,4 +1,4 @@
-#Angular 1x + Webpack2 + ES6 Sistem.import for split feature example.
+#Angular 1x + Webpack2 + ES6 System.import for split feature example.
 
 
 ##### Usage
