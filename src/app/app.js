@@ -1,9 +1,8 @@
 import angular from 'angular';
 
-Promise.all([
-    System.import('../app/components/app.components'),
-    System.import('../app/shared/app.shared')
-]).then(modules => {
+var paths = ["components/app.components.js", "shared/app.shared.js"];
+
+Promise.all(paths.map(path => System.import('../app/' + path))).then(modules => {
     let dependencies = [];
     modules.forEach(module => {
         dependencies.push(module.default.name);

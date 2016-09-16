@@ -19,7 +19,10 @@ module.exports = {
     },
     plugins: [
         new webpack.IgnorePlugin(/vertx/),
-        new webpack.optimize.UglifyJsPlugin({sourceMap: true})
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: true
+        }),
+        new webpack.IgnorePlugin(/[A-Za-z]*\.(html)$/i)
     ],
     devtool: 'source-map'
 };
